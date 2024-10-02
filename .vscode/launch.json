@@ -1,0 +1,72 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run tarea3",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/tarea3",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "meson compile",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "linux": {
+        "miDebuggerPath": "/usr/bin/gdb"
+      },
+      "windows": {
+        "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe"
+      },
+      "osx": {
+        "miDebuggerPath": "/usr/bin/lldb"
+      },
+      "debugServerPath": "",
+      "debugServerArgs": "",
+      "serverStarted": "",
+      "serverLaunchTimeout": 20000,
+      "filterStderr": false,
+      "filterStdout": false
+    },
+    {
+      "name": "Lanzar tarea3 con audio1.wav",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/tarea3",
+      "args": ["-f", "audio1.wav"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/build",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "meson compile",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "linux": {
+        "miDebuggerPath": "/usr/bin/gdb"
+      },
+      "windows": {
+        "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe"
+      },
+      "osx": {
+        "miDebuggerPath": "/usr/bin/lldb"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

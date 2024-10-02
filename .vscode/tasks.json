@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "meson setup",
+      "type": "shell",
+      "command": "meson setup build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "copy wav",
+      "type": "shell",
+      "command": "cp ${workspaceFolder}/*.wav ${workspaceFolder}/build/",
+      "group": "build",
+      "dependsOn": ["meson setup"]
+    },
+    {
+      "label": "meson compile",
+      "type": "shell",
+      "command": "meson compile -C build",
+      "dependsOn": ["meson setup", "copy wav"],
+      "group": "build"
+    }
+  ]
+}
